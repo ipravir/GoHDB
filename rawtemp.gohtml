@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title>HXE XSoData on Web Template using GOLang</title>
+    </head>
+    <body>
+        <h1>Employe Information</h1> 
+    
+        <table border="1">
+          <tr>
+            <td>Employee ID</td>
+            <td>First Name</td>
+            <td>Middle Name</td>
+            <td>Last Name</td>
+            <td>Mail ID</td>
+            <td>Mobile Exten</td>
+            <td>Mobile No</td>
+            <td>Department</td>
+          </tr>
+
+        {{ range . }}
+          <tr>
+            <td>{{ .ID }}</td>
+            <td>{{ .Fname }} </td>
+            <td>{{ .Mname }} </td>
+            <td>{{ .Lname }} </td>
+            <td>{{ .Mailid }} </td>
+            <td>{{ .Exten }} </td>
+            <td>{{ .Mobile }} </td>
+            <td>{{ .Depat }} </td>
+          </tr>
+        {{ end }}
+    </table>
+    </body>
+</html>
